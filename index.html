@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>自由アナキスト同盟</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<header>
+    <img src="images/LALA_logo.png" width="60%">
+
+</header>
+<body>
+
+    <div class="tab">
+        <label class="menu_label">
+            <input type="radio" name="tab" checked>
+            ニュース
+        </label>
+        <div>
+            <div class="news_body">
+                <div class="news_main">
+                    <div class="subtitle">最新ニュース</div>
+                    
+                    <div class="news">
+                        <div class="news_tag">
+                            中央委員会
+                        </div>
+                        <div class="news_title">
+                            <label> 
+                                <input type="checkbox">
+                                中央政務委員選挙を実施
+                            </label>
+                            <div class="news_content">
+                                5月22日、中央政務委員会は中央委員選挙を実施した。
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="news">
+                        <div class="news_tag">
+                            爆笑
+                        </div>
+                        <div class="news_title">
+                            <label> 
+                                <input type="checkbox">
+                                不幸徳議長、チョロＱにはねられ全治二か月
+                            </label>
+                            <div class="news_content">
+                                記念すべき2月22日、不幸徳秋水 同盟議長がチョロＱにはねられ、全治二か月のけがを負った。これは同盟の革命方針の表れであり、我々同盟員が見習うべき出来事だ。
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="news">
+                        <div class="news_tag">
+                            天皇制
+                        </div>
+                        <div class="news_title">
+                            <label> 
+                                <input type="checkbox">
+                                不幸徳議長、山椒天皇と寝る
+                            </label>
+                            <div class="news_content">
+                                山椒天皇が愛人らしい。
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <!--中央委員会、解放軍、経済、産業、爆笑-->
+                </div>
+                <div class="news_side">
+                    <div class="subtitle">同盟日報</div>
+                    <p>同盟日報を読もう！</p>
+                    <div class="buy_nippo">
+                        <a href="https://qr.paypay.ne.jp/p2p01_oEt6UIuUafRBzXeO" target="_blank">同盟日報を購読</a>
+                        <p>最新号 2026/19/19</p>
+                    </div>
+                    <div class="subtitle">SNS</div>
+                    <p></p>
+                    <li class="links"><a href="https://twitter.com/sametaro1012">同盟公式X</a></li>
+                    <li class="links">同盟公式Instagram</li>
+                    <li class="links">同盟日報X</li>
+                </div>
+            </div>
+        </div>
+    
+        <label class="menu_label">
+            <input type="radio" name="tab">
+            同盟委員発表
+        </label>
+        <div>党中央の発表
+
+        </div>
+    
+        <label class="menu_label">
+            <input type="radio" name="tab">
+            政策
+        </label>
+        <div>政策一覧
+
+        </div>
+        <label class="menu_label">
+            <input type="radio" name="tab">
+            政治主張
+        </label>
+        <div>政治主張
+
+        </div>
+    </div>
+
+<script src="./main.js"></script>
+
+</body>
+<footer>
+    <p id="kaku">このホームページはすべて架空のものです</p>
+    <p style="padding: 15px;">©2023 さめたろう</p>
+</footer>
+
+<style>
+
+.news{
+    border-left: 2px solid rgb(211, 211, 211);
+    margin-bottom: 15px;
+}
+.news_tag{
+    user-select: none;
+    margin-top: 15px;
+    background-color: rgb(183, 183, 183);
+    color: rgb(58, 58, 58);
+    font-weight: 300;
+    border-radius: 7px;
+    width: 80px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 12px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-left: 10px;
+}
+.news_title{
+    user-select: none;
+    margin-left: 10px;
+    border-bottom: 2px solid rgb(229, 229, 229);
+    
+}
+.news_title > label{
+    position: relative;
+    display: block;
+    padding-left: 20px;
+}
+.news_title > label > input{
+    display: none;
+}
+.news_title > label:before{
+    content: "";
+    position: absolute; 
+    top: 0.2em;
+    left: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 10px;
+    height: 10px;
+    border-top: 3px solid #d64242;
+    border-right: 3px solid #d64242;
+    transition: transform 0.2s;
+}
+.news_content{
+    opacity: 0;
+    height: 0;
+    user-select: text;
+    margin-left: 20px;
+    text-decoration: none;
+}
+.news_title > label:has(:checked) + .news_content{
+    height: auto;
+    opacity: 1;
+}
+.news_title > label:has(:checked):before{
+    content: "";
+    position: absolute; 
+    top: 0em;
+    left: 0;
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+    width: 10px;
+    height: 10px;
+    border-top: 3px solid #d64242;
+    border-right: 3px solid #d64242;
+}
+
+</style>
+
+</html>
